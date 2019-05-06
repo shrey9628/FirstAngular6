@@ -1,0 +1,41 @@
+<h1>Hey i am Alive</h1>
+
+<h1>List of odd and even number</h1>
+
+
+
+<div *ngFor="let id of ids">
+
+
+
+<h1 *ngIf="id%2==0" class="one">
+  {{id}} is a even number
+</h1>
+
+<h1 *ngIf="id%2!=0" class="two">
+    {{id}} is a odd number
+  </h1>
+
+
+ 
+</div>
+
+<br><br><br>
+
+<ul *ngFor="let peo of people" [ngSwitch]="peo.country">
+
+<li *ngSwitchCase="'fa'"
+  [ngClass]="'one'"> {{peo.name}} Age is {{peo.age}}
+</li>
+
+<li *ngSwitchCase="'india'"
+    [ngClass]="'two'">{{peo.name}} Age is {{peo.age}}
+  </li>
+
+  <li *ngSwitchDefault
+      [ngClass]="'three'">{{peo.name}} Age is {{peo.age}}
+    </li>
+
+
+
+</ul>
